@@ -78,19 +78,6 @@ class AccountTest extends PHPUnit_Framework_TestCase
     } //end testRetrievesAccountBalanceInCredits()
 
     /**
-     * Test retrieval of preferred translators set by user.
-     */
-    public function testRetrievesPreferredTranslatorsSetByUser()
-    {
-        $accountAPI = new Account();
-
-        $response = json_decode($accountAPI->getPreferredTranslators(), true);
-        $this->assertEquals('ok', $response['opstat']);
-        $this->assertTrue(isset($response['response']));
-        $this->assertTrue(empty($response['response']));
-    } //end testRetrievesPreferredTranslatorsSetByUser()
-
-    /**
      * Test retrieval of authenticated user details.
      */
     public function testRetrievesAuthenticateUserDetails()

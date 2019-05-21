@@ -64,22 +64,6 @@ class Account extends API
     } //end getBalance()
 
     /**
-     * Retrieves preferred translators as array by langs and tier.
-     *
-     * Calls account/preferred_translators (GET)
-     *
-     * @return string Gengo response
-     *
-     * @untranslatable v2/account/preferred_translators
-     *
-     * @api
-     */
-    public function getPreferredTranslators()
-    {
-        return $this->storeResponse(Client::get('v2/account/preferred_translators'));
-    } //end getPreferredTranslators()
-
-    /**
      * Retrieves the details of the authenticated user.
      *
      * Calls account/me (GET)
